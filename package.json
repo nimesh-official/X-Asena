@@ -16,6 +16,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "got": "^11.8.2",
     "node-webpmux": "^3.1.7",
+    "pm2": "^5.2.0",
     "pino": "^8.14.1",
     "qrcode-terminal": "^0.12.0",
     "sequelize": "^6.23.0",
@@ -23,7 +24,9 @@
     "x-asena": "^1.0.1"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "pm2 start index.js --deep-monitoring --attach --name bot",
+    "stop": "pm2 stop bot",
+    "restart": "pm2 restart bot" 
   },
   "repository": {
     "type": "git",
